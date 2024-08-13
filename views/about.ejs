@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journey - Reddit Clone</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7f8;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #ff4500;
+    padding: 10px 0;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.code-sample {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+    </style>
+     <header>
+        <div class="container">
+            <div class="logo">My Learning Journey</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#code">Code Samples</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="container">
+            <h1>About This Project</h1>
+            <p>This project showcases my learning journey in building a Reddit clone using technologies like Node.js, Express, and EJS. Below, you'll find the key features, code samples, and explanations of what I learned throughout this process.</p>
+        </section>
+
+        <section id="features" class="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Dynamic content rendering with EJS templates.</li>
+                <li>Full CRUD functionality: Create, Read, Update, Delete posts.</li>
+                <li>Express.js for server-side routing and handling requests.</li>
+                <li>Method override for supporting PUT and DELETE HTTP methods via forms.</li>
+                <li>Responsive design using CSS to ensure a consistent look across devices.</li>
+            </ul>
+        </section>
+
+        <section id="code" class="container">
+            <h2>Code Samples</h2>
+            <div class="code-sample">
+                <h3>1. Server Setup (Node.js and Express)</h3>
+                <pre><code class="language-javascript">
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
+                </code></pre>
+            </div>
+            <div class="code-sample">
+                <h3>2. Dynamic EJS Template</h3>
+                <pre><code class="language-html">
+&lt;div class="post"&gt;
+    &lt;h2&gt;&lt;%= post.title %&gt;&lt;/h2&gt;
+    &lt;p&gt;Posted by &lt;%= post.user %&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;%= post.content %&gt;&lt;/p&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div class="code-sample">
+                <h3>3. Basic Styling with CSS</h3>
+                <pre><code class="language-css">
+header {
+    background-color: #ff4500;
+    padding: 10px 0;
+    color: white;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch or learn more about my projects, feel free to reach out!</p>
+            <ul>
+                <li>Email: <a href="mailto:aqibmunir218@gmail.com">aqibmunir218@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/aqibmunir8" target="_blank">github.com/aqibmunir8</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Learning Journey. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function() {
+            alert("Welcome to My Learning Journey!");
+        });
+
+    </script>
+</body>
+</html>

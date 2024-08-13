@@ -1,0 +1,115 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7f8;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #ff4500;
+    padding: 10px 0;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .search {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header .search input {
+    padding: 5px;
+}
+
+header .user {
+    float: right;
+}
+
+header .user button {
+    background-color: #ffffff;
+    color: #ff4500;
+    border: 1px solid #ff4500;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+
+.post-body-btns{
+    display: flex;
+    gap: 5px;
+}
+
+.content {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.post {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    margin-bottom: 10px;
+}
+
+.post-header h2 {
+    margin: 0;
+}
+
+.post-body {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Clone</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Reddit</div>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:3000/posts/new">Create a New Post</a></li>
+                    <li><a href="http://localhost:3000/about">About this Site</a></li>
+                    <!-- <li><a href="#">All</a></li> -->
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="user">
+                <button class="learning">Log In</button>
+                <button class="learning">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="content">
+                <% for(post of posts){ %>
+                <article class="post">
+                    <div class="post-header">
+                        <h2><%= post.title%></h2>
+                        <p>Posted by <%= post.user%></p>
+                    </div>
+                    <div class="post-body">
+                        <p><%=post.content%></p>
+                        <div class="post-body-btns">
+                            <form action="http://localhost:3000/posts/<%=post.id%>" method="get">
+                                <button>Readmore</button>
+                            </form>
+                            <form action="http://localhost:3000/posts/<%=post.id%>/edit" method="get">
+                                <button>Edit</button>
+                            </form>
+                            <form action="http://localhost:3000/posts/<%=post.id%>/delete?_method=DELETE" method="post">
+                                <button>Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+                <% }%>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Reddit Clone. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let still_learning = document.querySelectorAll(".learning"); // selecting all elements with class "learning"
+
+        // Loop through each element in the NodeList
+        still_learning.forEach(function(element) {
+            element.addEventListener("click", function() {
+                alert("This is a demo project. The user is still learning and will create many great projects in the future!");
+            });
+        });
+    </script>
+</body>
+</html>
